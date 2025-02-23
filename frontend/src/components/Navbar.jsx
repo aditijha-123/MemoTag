@@ -1,27 +1,25 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+  
 
 const Navbar = () => {
   return (
-    <div className="container">
-      <div>
-        <Link to="/">Login</Link>
+    <div>
+      {/* Navbar Section */}
+      <div className="navbar">
+        <div className="navbar-links">
+          <Link to="/">Login</Link>
+          <Link to="/register">Register</Link>
+          <Link to="/user">User</Link>
+          <Link to="/posts">CommonPosts</Link>
+          <Link to="/admin">SuperAdmin</Link>
+        </div>
       </div>
-      <div>
-        <Link to="/register">Register</Link>
-      </div>
-      <div>
-        <Link to="/user">User</Link>
-      </div>
-      <div>
-        <Link to="/posts">CommonPosts</Link>
-      </div>
-      <div>
-        <Link to="/admin">SuperAdmin</Link>
-      </div>
-      <main>
-      <Outlet />
-    </main>
+
+      {/* Main Content Section */}
+      <main className="main-content">
+        <Outlet />
+      </main>
     </div>
   );
 };
