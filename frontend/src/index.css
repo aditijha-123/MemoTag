@@ -1,8 +1,8 @@
 /* index.css */
 
-/* Navbar container */
+
 .navbar {
-  background-color: #2d3748; /* Dark background */
+  background-color: #2d3748; 
   color: white;
   display: flex;
   justify-content: space-between;
@@ -10,7 +10,7 @@
   padding: 16px;
 }
 
-/* Navbar links */
+
 .navbar-links {
   display: flex;
   gap: 24px;
@@ -22,12 +22,12 @@
   transition: color 0.3s ease;
 }
 
-/* Link hover effect */
+
 .navbar-links a:hover {
-  color: #fbbf24; /* Yellow color on hover */
+  color: #fbbf24; 
 }
 
-/* Add some margin on top for the main content */
+
 .main-content {
   margin-top: 32px;
 }
