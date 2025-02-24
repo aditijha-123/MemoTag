@@ -27,7 +27,7 @@ const UserPanel = () => {
                 <textarea value={content} onChange={(e) => setContent(e.target.value)} required />
                 <button type="submit">Submit Post</button>
             </form>
-            <h3>Your Posts</h3>
+            
             {posts.map(post => <p key={post._id}>{post.content}</p>)}
         </div>
     );

@@ -16,6 +16,7 @@ const SuperAdminPanel = () => {
     };
 
     useEffect(() => { fetchPosts(); }, []);
+    
 
     return (
         <div>

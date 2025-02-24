@@ -6,22 +6,22 @@ import CommonPanel from "./components/CommonPanel";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Navbar from "./components/Navbar";
-
+import ProtectedSuperAdmin from "./components/ProtectedSuperAdmin";
 
 const App = () => (
-
-  
-    <Router>
-        <Routes>
-            <Route path="/" element={<Navbar/>}>
-            <Route path="/" element={<Login />}/>
-            <Route path="/register" element={<Register />} />
-            <Route path="/user" element={<UserPanel />} />
-            <Route path="/admin" element={<SuperAdminPanel />} />
-            <Route path="/posts" element={<CommonPanel />} />
-            </Route>
-        </Routes>
-    </Router>
+  <Router>
+    <Routes>
+      <Route path="/" element={<Navbar />}>
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/user" element={<UserPanel />} />
+         <Route path="/" element={<ProtectedSuperAdmin />}>
+          <Route path="/admin" element={<SuperAdminPanel />} />
+        </Route>
+        <Route path="/posts" element={<CommonPanel />} />
+      </Route>
+    </Routes>
+  </Router>
 );
 
 export default App;
